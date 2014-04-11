@@ -27,7 +27,8 @@
         oddNumber: oddNumber,
         positiveNumber: positiveNumber,
         negativeNumber: negativeNumber,
-        number: number
+        number: number,
+        bool: bool
     };
 
     messages = {
@@ -47,7 +48,8 @@
         oddNumber: 'Invalid number',
         positiveNumber: 'Invalid number',
         negativeNumber: 'Invalid number',
-        number: 'Invalid number'
+        number: 'Invalid number',
+        bool: 'Invalid boolean'
     };
 
     functions = {
@@ -317,6 +319,18 @@
      */
     function number (thing) {
         return typeof thing === 'number' && isNaN(thing) === false;
+    }
+
+    /**
+     * Public function `bool`.
+     *
+     * Returns `true` if something is a boolean,
+     * `false` otherwise.
+     *
+     * @param thing The thing to test.
+     */
+    function bool (thing) {
+        return typeof thing === 'boolean';
     }
 
     /**
