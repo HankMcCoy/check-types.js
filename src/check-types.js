@@ -28,7 +28,8 @@
         positiveNumber: positiveNumber,
         negativeNumber: negativeNumber,
         number: number,
-        bool: bool
+        bool: bool,
+        containedIn: containedIn
     };
 
     messages = {
@@ -49,7 +50,8 @@
         positiveNumber: 'Invalid number',
         negativeNumber: 'Invalid number',
         number: 'Invalid number',
-        bool: 'Invalid boolean'
+        bool: 'Invalid boolean',
+        containedIn: 'Invalid value'
     };
 
     functions = {
@@ -331,6 +333,19 @@
      */
     function bool (thing) {
         return typeof thing === 'boolean';
+    }
+
+    /**
+     * Public function `containedIn`.
+     *
+     * Returns `true` if something is contained in the supplied values array,
+     * `false` otherwise.
+     *
+     * @param thing The thing to test.
+     * @param values An array of the permitted values.
+     */
+    function containedIn (thing, values) {
+        return values.indexOf(thing) !== -1;
     }
 
     /**
